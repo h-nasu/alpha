@@ -1,0 +1,74 @@
+
+<header class="clearfix"> <a href="#!/home"><img src="../../images/top_logo_s.jpg" width="400" height="80" alt="Alpha Connection"></a></header>
+<!--Music Player-->
+<div id="jp_container_1" class="musicplayer clearfix">
+  <div class="mp_nowplaying">
+    <!--<img class="image-resize" src="artists/cozy/images/1614989_555699181192559_1502290387_n.jpg"> -->
+    <div class="loading"><img src="/images/jplayer/ajax_loader_gray.gif" /></div>
+    <div id="jquery_jplayer_1" class="image-resize"></div>
+    <span id="mp_title"></span><br /><span id="mp_artist"></span><br />
+    <div class="jp-current-time"></div>
+  </div>
+  <div class="mp_button">
+    <ul class="mp_btns">
+      <li><a href="javascript:myPlaylist.previous();"><img src="/images/mp_button__01.png" width="41" height="47"></a></li>
+      <li><a href="javascript:;" class="jp-play" tabindex="1"><img src="/images/mp_button__03.png" width="46" height="47"></a></li>
+      <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+      <li><a href="javascript:myPlaylist.next();"><img src="/images/mp_button__05.png" width="42" height="47"></a></li>
+      <li><a href="#"><img src="/images/mp_button__07.png" width="36" height="47"></a></li>
+      <li><a href="#"><img src="/images/mp_button__09.png" width="36" height="47"></a></li>
+      <li><a href="#"><img src="/images/mp_button__11.png" width="36" height="47"></a></li>
+    </ul>
+  </div>
+  <div class="userlogin">
+    <h3 class="user_name"><img src="{{me.profile_image}}" class="user_icon">{{me.name}}</h3>
+      <a href="#">Favorites</a> <a href="#">Friends</a> <a href="#">Settings</a>
+  </div>
+  <div class="jp-progress">
+    <div class="jp-seek-bar">
+      <div class="jp-play-bar"></div>
+    </div>
+  </div>
+  <div class="jp-volume-bar">
+    <div class="jp-volume-bar-value"></div>
+  </div>
+  
+  
+  <div class="jp-playlist">
+    <ul>
+      <li></li> <!-- Empty <li> so your HTML conforms with the W3C spec -->
+    </ul>
+  </div>
+  
+  <hr>
+  <div class="jp-songlist">
+    <p style="font-weight:bold;" ><a href="javascript:void(0)" ng-init="showSongList = false" ng-click="showSongList = ! showSongList" ng-switch="showSongList">My Song List</a></p>
+    <div collapse="!showSongList">
+      <ul ng-repeat="song_list in song_lists">
+        <li ng-show="song_list.file">
+          <a href="/file/download/?download_type=song_file&song_id={{song_list.id}}" target="_blank">
+          download
+          </a>
+        </li>
+        <li>
+          {{song_list.name}}
+        </li>
+        <li>
+          <button class="btn btn-primary" ng-click="addPlayList(song_list)">
+            Add to Play List
+          </button>
+          <button class="btn btn-primary" ng-click="deleteSongList(song_list.id)">
+            Delete from Song List
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--End Music Player-->
+
+<div ng-view></div>
+
+
+
+

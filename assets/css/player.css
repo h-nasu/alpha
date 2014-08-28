@@ -1,0 +1,84 @@
+
+#jquery_jplayer_1.image-resize {
+  float: left;
+  margin-right: 10px;
+}
+.jp-playlist-current {
+  color: #AD8888 !important;
+}
+.jp-playlist {
+  display: inline-block;
+  margin-top: 15px;
+}
+.jp-playlist ul {
+  list-style: none;
+}
+
+.loading {
+  position: absolute;
+  margin: 5px 0px 0px 200px;
+  display: none;
+}
+.loading img {
+  height: 40px;
+  width: 40px;
+}
+
+
+/* @group progress bar */
+
+div.jp-progress {
+  overflow:hidden;
+  background-color: #ddd;
+}
+div.jp-progress {
+  height: 5px;
+  margin-top: 10px;
+  display: inline-block;
+}
+div.jp-progress {
+  left:166px;
+  width:130px;
+  float: left;
+}
+div.jp-seek-bar {
+  background: url("/images/jplayer/jplayer.blue.monday.jpg") 0 -202px repeat-x;
+  width:0px;
+  height:100%;
+  cursor: pointer;
+}
+div.jp-play-bar {
+  background: url("/images/jplayer/jplayer.blue.monday.jpg") 0 -218px repeat-x ;
+  width:0px;
+  height:100%;
+}
+/* The seeking class is added/removed inside jPlayer */
+div.jp-seeking-bg {
+  background: url("/images/jplayer/jplayer.blue.monday.seeking.gif");
+}
+
+/* @end */
+
+/* @group volume controls */
+
+div.jp-volume-bar {
+  position: absolute;
+  overflow:hidden;
+  background: url("/images/jplayer/jplayer.blue.monday.jpg") 0 -250px repeat-x;
+  width:46px;
+  height:3px;
+  cursor: pointer;
+}
+div.jp-volume-bar {
+  top: 5px;
+  left: 20px;
+  display: inline-block;
+  position: relative;
+}
+div.jp-volume-bar-value {
+  background: url("/images/jplayer/jplayer.blue.monday.jpg") 0 -256px repeat-x;
+  width:0px;
+  height:5px;
+}
+
+

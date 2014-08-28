@@ -1,0 +1,41 @@
+<h2>My Song Name</h2>
+<alert type="alertType" close="showAlert = false;" ng-show="showAlert">{{alertMsg}}</alert>
+<button class="btn btn-primary" ng-click="addSong = ! addSong" ng-switch="addSong">
+  <span ng-switch-when="false">Add</span>
+  <span ng-switch-when="true">Cancel</span>
+</button>
+<br><br>
+<div collapse="!addSong">
+  <div ng-include src="'/partials/manageSongForm.tpl.html'" ng-init="album_id = albumId"></div>
+</div>
+
+<ul ng-repeat="song in songs">
+  <li ng-show="song.file">
+    <a href="/file/download/?download_type=song_file&song_id={{song.id}}" target="_blank" >{{song.name}} download</a>
+  </li>
+  <li>
+    {{song.name}}
+  </li>
+  <li>
+    <button class="btn btn-info btn-sm" ng-init="editSong = false" ng-click="editSong = ! editSong" ng-switch="editSong">
+      <span ng-switch-when="false">Edit</span>
+      <span ng-switch-when="true">Cancel</span>
+    </button>
+    <button class="btn btn-default" ng-click="openUploadImage(song)">
+      Upload Image
+    </button>
+    <button class="btn btn-warning btn-sm" ng-click="deleteSong(song)">
+      Delete
+    </button>
+  </li>
+  <li>
+    <div collapse="!editSong">
+      <div ng-include src="'/partials/manageSongForm.tpl.html'" ng-init="songId = song.id; album_id = albumId"></div>
+    </div>
+    <hr>
+  </li>
+</ul>
+
+
+
+

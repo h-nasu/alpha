@@ -1,0 +1,49 @@
+<h2>My Album Name</h2>
+<alert type="alertType" close="showAlert = false;" ng-show="showAlert">{{alertMsg}}</alert>
+<button class="btn btn-primary" ng-click="addAlbum = ! addAlbum" ng-switch="addAlbum">
+  <span ng-switch-when="false">Add</span>
+  <span ng-switch-when="true">Cancel</span>
+</button>
+<br><br>
+<div collapse="!addAlbum">
+<!--
+todo passing artist ID
+artist -> album relation
+-->
+
+  <div ng-include src="'/partials/manageAlbumForm.tpl.html'" ng-init="artist_id = artistId"></div>
+</div>
+
+<ul ng-repeat="album in albums">
+  <li ng-show="album.cover_image">
+    <img src="/file/download/?download_type=album_cover_image&album_id={{album.id}}" />
+  </li>
+  <li>
+    {{album.name}}
+  </li>
+  <li>
+    <button class="btn btn-info btn-sm" ng-init="editAlbum = false" ng-click="editAlbum = ! editAlbum" ng-switch="editAlbum">
+      <span ng-switch-when="false">Edit</span>
+      <span ng-switch-when="true">Cancel</span>
+    </button>
+    <button class="btn btn-default" ng-click="openUploadImage(album)">
+      Upload Image
+    </button>
+    <button class="btn btn-warning btn-sm" ng-click="deleteAlbum(album)">
+      Delete
+    </button>
+  </li>
+  <li>
+    <a href="#!/manageSong/{{album.id}}">Manage your Songs Information</a>
+  </li>
+  <li>
+    <div collapse="!editAlbum">
+      <div ng-include src="'/partials/manageAlbumForm.tpl.html'" ng-init="albumId = album.id; artist_id = artistId"></div>
+    </div>
+    <hr>
+  </li>
+</ul>
+
+
+
+

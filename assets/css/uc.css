@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+body#uc {
+	margin:0;		
+}
+div.center{
+	margin-bottom:20px;
+}
+.float_left p,.float_right p{
+	font-size:14px;
+	line-height:20px;
+	padding-bottom:30px;
+}
+div.float_left{
+	margin-right:60px;
+	width:420px;
+}
+div.float_right{
+	width:420px;
+}

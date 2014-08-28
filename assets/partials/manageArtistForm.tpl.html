@@ -1,0 +1,18 @@
+<form class="form-horizontal well" name="artistForm" role="form" ng-controller="ManageArtistFormCtrl" ng-submit="submit(newArtist)" novalidate>
+  <div class="form-group">
+  <label class="col-sm-2 control-label">Artist Name</label>
+  <div class="col-sm-10">
+  <input type="text" class="form-control" placeholder="Artist Name" ng-model="newArtist.name" required />
+  </div>
+  </div>
+    
+  <input type="hidden" ng-show="newArtist.id" value="{{newArtist.id}}" />
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+    <button type="submit" ng-disabled="artistForm.$invalid" class="btn btn-primary" ng-switch="editLabel">
+      <span ng-switch-when="false">Add</span>
+      <span ng-switch-when="true">Edit</span>
+    </button>
+    </div>
+  </div>
+</form> 

@@ -1,0 +1,11 @@
+
+<ul ng-repeat="artist in artists">
+  <li ng-show="artist.cover_image">
+    <img src="/file/download/?download_type=artist_cover_image&artist_id={{artist.id}}" />
+  </li>
+  <li>
+    <a href="#!/artistDetail/{{artist.id}}">
+      {{artist.name}}
+    </a>
+  </li>
+<ul>

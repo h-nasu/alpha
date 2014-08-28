@@ -1,0 +1,223 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Artist Page */
+	
+h2.ai01{
+	text-align:center;
+	margin:40px 0;
+	clear:both;
+}
+div#artist_introduction{
+	background:url(../../images/artistinfo_bg.gif);
+	clear:both;
+	color:#c6c6c6;
+	border-radius: 3px;
+	font-size:12px;
+	line-height:18px;
+	padding:20px;
+	margin-bottom:60px
+}
+img.artist_photo	{
+	margin:0 20px 20px 0;
+	min-width:400px;
+}
+div#artist_info	h3{
+	font-size:14pt;
+	font-weight:bold;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka,Arial;
+	margin-bottom:20px;
+	text-shadow:none;
+	letter-spacing:0.1em
+}
+div.ai_text{
+	clear:both;
+}
+div.ai_text div.ai_textPhoto{
+	width:400px;
+	float:left;
+}
+div.ai_text div.ai_textInroduction{
+	width:490px;
+	float:right;
+	margin:0 10px 30px 20px;
+}
+
+div.ai_text img{
+	max-width:400px;
+	min-width:400px;
+}
+
+div.ai_text h3{
+	font-size:12pt;
+}
+
+div.ai_sns{
+	float:left;
+	width:200px;
+}
+div.ai_menu{
+	float:left;
+	margin-left:225px;
+	background:#313131;
+	border:#484848 solid 1px;
+	border-radius:3px;
+	padding:5px 15px;
+	width:450px
+}
+div.ai_menu ul,div.ai_menu ul li{
+	margin:0px;
+	display:inline-block;
+}
+div.ai_menu a{
+	color:#5b5a5a;
+	font-size:11px;
+	text-indent:27px;
+	height:23px;
+	line-height:23px;
+	display:inline-block;
+}
+div.ai_menu ul li.ai_fav a:link,div.ai_menu ul li.ai_fav a:visited{
+	background:url(../../images/artistinfo_icon01.gif) no-repeat 0px 0px;
+	margin-right:20px;
+}	
+div.ai_menu ul li.ai_fav a:hover{
+	background:url(../../images/artistinfo_icon02.gif) no-repeat 0px 0px;
+	margin-right:20px;
+	color:#c6c6c6;
+}	
+div.ai_menu ul li.ai_donate a:link,div.ai_menu ul li.ai_donate a:visited{
+	background:url(../../images/artistinfo_icon03.gif) no-repeat 0px 0px;
+	margin-right:20px;
+}	
+div.ai_menu ul li.ai_donate a:hover{
+	background:url(../../images/artistinfo_icon04.gif) no-repeat 0px 0px;
+	margin-right:20px;
+	color:#c6c6c6;
+}	
+div.ai_menu ul li.ai_send a:link,div.ai_menu ul li.ai_send a:visited{
+	background:url(../../images/artistinfo_icon05.gif) no-repeat 0px 0px;
+	display:inline-block;
+}	
+div.ai_menu ul li.ai_send a:hover{
+	background:url(../../images/artistinfo_icon06.gif) no-repeat 0px 0px;
+	color:#c6c6c6;
+}	
+
+div.artist_introduction{
+	margin-bottom:60px;
+}
+h2.ai01{
+	text-align:center;
+	margin:40px 0;
+	clear:both;
+}
+div.artistNotes{
+	margin-bottom:40px;
+	clear:both;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -o-box;
+	display: box;
+}
+div.artistNotes h2.artist_info{
+	margin:0px;
+	
+}
+div.artistListandLive{
+	height:100%;
+}
+div.artistInfoMusic,div.artistInfoLive,div.artistInfoMessage,div.artistInfoTwitter{
+	background-color:#161616;
+	border-radius:3px;
+	padding:15px;
+}
+div.artistInfoMusic{
+	margin-bottom:20px;
+	heigt:60%;
+}
+div.artistInfoMusic > div{
+	color:#545454;
+	clear:both;
+}
+div.artistInfoMusic > div > span{
+	display:inline-block;
+	float:right;
+	font-size:16px;
+}
+
+div.artistInfoLive{
+	heigt:40%;
+}
+div.artistInfoMusic ul{
+	list-style:none;
+	margin:15px 0;
+}
+div.artistInfoMusic ul li{
+	font-size:12px;
+	line-height:17px;
+	text-indent:21px;
+	background:url(../../images/play16.png) no-repeat;
+	margin:5px 0;
+}
+div.artistInfoMusic ul li a:hover{
+	color:#FFF;
+}
+
+
+div.artistListandLive{
+	width:400px;
+}
+div.artistInfoMessage{
+	width:260px;
+	margin:0 20px;
+}
+div.artistInfoMessage p,div.artistInfoLive p{
+	margin-top:15px;
+	color:#8b8b8b;
+	line-height:18px;
+}
+div.artistInfoTwitter{
+	width:260px;
+	color:#8b8b8b;
+}
+.e-entry-title{
+	color:#8b8b8b !important;
+}
+div.pickUp_artist{
+	clear:both;
+}
+div.pickUp_artist h2.artist_info{
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size:14px;
+	margin-bottom:20px;
+}
+div.pickUp_artist ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+div.pickUp_artist ul li{
+	display: table-cell;
+	width:120px;
+	height:120px;
+	background:#161616;
+  display: inline-block;  
+	margin-right:12px;
+	border-radius:3px;
+	padding:0px;
+}
+div.pickUp_artist ul li img{
+	border:1px solid #585858;
+	border-radius:3px;
+}
+
+div.pickUp_artist ul li:last-child{
+	margin-right:0;
+}
+div.stream {
+	scrollbar-base-color:#999;
+}
+
+
+

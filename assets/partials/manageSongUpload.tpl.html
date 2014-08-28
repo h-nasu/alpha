@@ -1,0 +1,30 @@
+
+<div class="modal-header">
+  <h2>Upload Song ({{song.name}})</h2>
+</div>
+
+<div class="modal-body">
+  <form class="form-horizontal well" action="/file/upload" enctype="multipart/form-data" method="post">
+    <div class="form-group">
+    <div class="col-sm-12">
+    <input class="form-control" type="hidden" name="upload_type" value="song_file" />
+    <input class="form-control" type="hidden" name="song_id" value="{{song.id}}" />
+    <input class="form-control" type="hidden" name="user" value="{{song.user}}" />
+    <input class="form-control" type="file" name="song" multiple="multiple" />
+    </div>
+    </div>
+    <div class="form-group">
+    <div class="col-sm-12">
+    <button type="submit" class="btn btn-primary">Upload</button>
+    <button type="button" class="btn btn-warning" ng-click="close()">Close</button>
+    <span ng-show="song.file">
+    <!--<a href="/fileupload/?resumeFile={{resumeFile}}" class="btn btn-default">Download Resume</a>-->
+    <!--<button type="button" ng-click="del()" class="btn btn-warning">delete</a>-->
+    </span>
+    </div>
+    </div>
+  </form>
+</div>
+
+<div class="modal-footer">
+</div>
