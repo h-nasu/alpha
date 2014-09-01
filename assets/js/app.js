@@ -7,6 +7,9 @@
  * Feel free to change none, some, or ALL of this file to fit your needs!
  */
 
+if (window.location.hash == '#_=_') {
+  window.location.hash = '#!/home'; // for older browsers, leaves a # behind
+}
 
 (function (io) {
 

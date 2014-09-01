@@ -15,8 +15,18 @@ var verifyHandler = function (token, tokenSecret, profile, done) {
         token: token,
         tokenSecret: tokenSecret
       }
-      if (profile.photos[0].value) {
-        addInfo.profile_image = profile.photos[0].value;
+      
+      switch (profile.provider) {
+        case 'twitter':
+          if (profile.photos[0].value) {
+            addInfo.profile_image = profile.photos[0].value;
+          }
+          break;
+        case 'facebook':
+          addInfo.profile_image = 'https://graph.facebook.com/'+profile.id+'/picture';
+          break;
+        default:
+          break;
       }
       
         User.findOne({uid: profile.id}).exec(function (err, user) {
